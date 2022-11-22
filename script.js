@@ -14,20 +14,21 @@ document.onkeydown = function (e) {
       hero.classList.remove("animateHero");
     }, 1200);
   }
-  if (e.keyCode == 39) {
-    hero = document.querySelector(".hero");
-    heroX = parseInt(
-      window.getComputedStyle(hero, null).getPropertyValue("left")
-    );
-    hero.style.left = heroX + 50 + "px";
-  }
-  if (e.keyCode == 37) {
-    hero = document.querySelector(".hero");
-    heroX = parseInt(
-      window.getComputedStyle(hero, null).getPropertyValue("left")
-    );
-    hero.style.left = heroX - 50 + "px";
-  }
+  // their is no use of this left and right  butto click
+  //   if (e.keyCode == 39) {
+  //     hero = document.querySelector(".hero");
+  //     heroX = parseInt(
+  //       window.getComputedStyle(hero, null).getPropertyValue("left")
+  //     );
+  //     hero.style.left = heroX + 50 + "px";
+  //   }
+  //   if (e.keyCode == 37) {
+  //     hero = document.querySelector(".hero");
+  //     heroX = parseInt(
+  //       window.getComputedStyle(hero, null).getPropertyValue("left")
+  //     );
+  //     hero.style.left = heroX - 50 + "px";
+  //   }
 };
 
 setInterval(() => {
@@ -37,9 +38,9 @@ setInterval(() => {
 
   dx = parseInt(window.getComputedStyle(hero, null).getPropertyValue("left"));
   dy = parseInt(window.getComputedStyle(hero, null).getPropertyValue("top"));
-
   ox = parseInt(window.getComputedStyle(frog, null).getPropertyValue("left"));
   oy = parseInt(window.getComputedStyle(frog, null).getPropertyValue("top"));
+
   offsetX = Math.abs(dx - ox);
   offsetY = Math.abs(dy - oy);
 
